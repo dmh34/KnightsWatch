@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="KnightsWatch.UserControls.PersonnelUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KnightsWatch.UserControls"
+             mc:Ignorable="d" 
+             xmlns:vm ="clr-namespace:KnightsWatch.Presentation.ViewModels;assembly=Presentation"
+             d:DataContext="{d:DesignInstance Type=vm:PersonnelTabItemViewModel, IsDesignTimeCreatable=True}"
+             d:DesignHeight="1080" d:DesignWidth="720"
+             xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
+             >
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <Label Content="Availiable Callsigns"/>
+                <ListView ItemsSource="{Binding PersonnelControlViewModel.CallSigns}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding PersonnelControlViewModel}" MinHeight="100" MinWidth="75">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Center">
+                                   <Run Text="{Binding CallSign.Name}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Availiable Personnel"/>
+                <ListView ItemsSource="{Binding PersonnelControlViewModel.Roster}"  Name="AvailiblePersonnel" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding PersonnelControlViewModel}" >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            
+                            <WrapPanel>
+                                
+                            </WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            
+                            <Border CornerRadius="5"  BorderBrush="AliceBlue" BorderThickness="1">
+                            <StackPanel Margin="0,0,0,0" >
+                                <StackPanel.Style>
+                                    <Style>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsBusy}">
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                                    <Border CornerRadius="5,5,0,0" BorderBrush="AliceBlue" Background="AliceBlue" >
+                                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" />
+                                    </Border>
+                                    <TextBlock  HorizontalAlignment="Center">
+                                    <TextBlock.Style >
+                                        <Style TargetType="{x:Type TextBlock}">
+                                               
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsBusy}" Value="True">
+                                                    <Setter Property="Text" Value="Currently Busy"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsBusy}" Value="False">
+                                                    <Setter Property="Text" Value="Awaiting Assignment"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                   
+                                    <TextBlock x:Name="CallSigntxtbox" HorizontalAlignment="Center" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding }" Text="{Binding CallSign.Name}">
+                                    <!--<TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding CallSign, ElementName=CallSigntxtbox}" Value="{x:Null}">
+                                                    <Setter Property="Text" Value="Awaiting Callsign Assignment"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CallSign}" Value="">
+                                                    <Setter Property="Text" Value="Awaiting Callsign Assignment"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CallSign}" Value="Lead">
+                                                    <Setter Property="Text" Value="{Binding CallSign}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>-->
+                                </TextBlock>
+                            </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

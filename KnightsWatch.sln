@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsWatch", "KnightsWatch\KnightsWatch.csproj", "{1B827CC6-8F95-4B86-A602-A8A50F63A9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{DAEDD10F-417A-4B77-B9BE-8D22CFB93CD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{1727AF1B-EA14-44CA-AB79-4D774D9D9EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationUnitTest", "PresentationUnitTest\PresentationUnitTest.csproj", "{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3EE2E0C2-0BBE-46FF-AB99-12937DE56192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{83045FD4-4CA1-4476-BAA1-3EC480BC0EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{F1CDDA6C-C099-4546-9007-234E3E26B5C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsWatchService", "KnightsWatchService\KnightsWatchService.csproj", "{49954FBC-7124-4023-B1AA-D4BEA6FF3866}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B827CC6-8F95-4B86-A602-A8A50F63A9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B827CC6-8F95-4B86-A602-A8A50F63A9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B827CC6-8F95-4B86-A602-A8A50F63A9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B827CC6-8F95-4B86-A602-A8A50F63A9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEDD10F-417A-4B77-B9BE-8D22CFB93CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEDD10F-417A-4B77-B9BE-8D22CFB93CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEDD10F-417A-4B77-B9BE-8D22CFB93CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEDD10F-417A-4B77-B9BE-8D22CFB93CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE2E0C2-0BBE-46FF-AB99-12937DE56192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE2E0C2-0BBE-46FF-AB99-12937DE56192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE2E0C2-0BBE-46FF-AB99-12937DE56192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE2E0C2-0BBE-46FF-AB99-12937DE56192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83045FD4-4CA1-4476-BAA1-3EC480BC0EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83045FD4-4CA1-4476-BAA1-3EC480BC0EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83045FD4-4CA1-4476-BAA1-3EC480BC0EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83045FD4-4CA1-4476-BAA1-3EC480BC0EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1CDDA6C-C099-4546-9007-234E3E26B5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1CDDA6C-C099-4546-9007-234E3E26B5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1CDDA6C-C099-4546-9007-234E3E26B5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1CDDA6C-C099-4546-9007-234E3E26B5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49954FBC-7124-4023-B1AA-D4BEA6FF3866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49954FBC-7124-4023-B1AA-D4BEA6FF3866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49954FBC-7124-4023-B1AA-D4BEA6FF3866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49954FBC-7124-4023-B1AA-D4BEA6FF3866}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40EA54CA-C980-4B2E-9D5E-F97A867F3A6A} = {1727AF1B-EA14-44CA-AB79-4D774D9D9EA4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77B3D52D-8EC4-4BB8-89FD-2A9D7F4C3ED0}
+	EndGlobalSection
+EndGlobal

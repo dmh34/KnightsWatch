@@ -1,0 +1,24 @@
+﻿<Window x:Class="KnightsWatch.Windows.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KnightsWatch.Windows"
+        mc:Ignorable="d"
+        xmlns:vm ="clr-namespace:KnightsWatch.Presentation.ViewModels;assembly=Presentation"
+        d:DataContext="{d:DesignInstance Type=vm:HistoryWindowViewModel, IsDesignTimeCreatable=True}"
+        Title="HistoryWindow" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Person.Name}"/>
+                
+            </StackPanel>
+            
+            <DataGrid ItemsSource="{Binding TaskHistory}">
+                
+            </DataGrid>
+        </StackPanel>
+        
+    </Grid>
+</Window>
